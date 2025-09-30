@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+:root{
+    --color-background: #4f4170;
+    --color-background2: #dddddd;
+    --color-error: #c83b3b;
+    --color-text: #000;
+    --color-text2: #ffffff;
+    --color-link: #37406a;
+}

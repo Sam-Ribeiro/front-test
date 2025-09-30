@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body{
+    height: 90dvh;
+    background-color: var(--color-background);
+    font-family:cursive;
+    color: var(--color-text)
+}
+
+a{
+    color: var(--color-link)
+}
