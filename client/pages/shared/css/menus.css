@@ -30,6 +30,45 @@ nav{
     width: 300px;
     height: 120dvh;
     background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+nav ul{
+    list-style: none;
+    position: sticky;
+    top: 0%;
+    bottom: 0%;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+nav ul li a{
+    color: var(--color-text2);
+    text-decoration: none;
+    background-color: var(--color-background3);
+    flex: 1;
+}
+nav a{
+    display: flex;
+    color: var(--color-text2);
+    padding: 30px;
+    line-height: 0;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+}   
+nav a:hover{
+    background-color: var(--color-text2);
+    color: var(--color-background3);
+}
+.actual-page{
+    background-color: var(--color-background2);
+    color: var(--color-background3);
 }
 
 /* Footer */

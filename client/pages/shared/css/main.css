@@ -50,12 +50,16 @@ main section{
     align-items: center;
     height: 400px;
     width: 300px;
-    background-color: beige;
+    background-color: var(--color-background4);
     margin: 30px;
     border-radius: 10px;
     transition: all 0.5s ease;
     z-index: 3;
+}
+.content h3{
     font-family:fantasy;
+    font-size: 1.2em;
+    font-weight: 100;
 }
 
 .content:hover{
