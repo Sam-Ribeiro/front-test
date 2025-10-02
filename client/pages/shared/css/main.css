@@ -4,9 +4,66 @@ body{
     height: 90dvh;
     background-color: var(--color-background);
     font-family:cursive;
-    color: var(--color-text)
+    color: var(--color-text);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 a{
     color: var(--color-link)
+}
+
+main{
+    background-color: var(--color-background2);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#main-img{
+    width: 60dvw;
+    position: fixed;
+    top: 8%;
+}
+
+main section{
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    background-color: beige;
+    margin: 30px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    z-index: 3;
+    font-family:fantasy;
+}
+
+.content:hover{
+    transform: scale(1.05) rotate(5deg);
+    
+}
+
+.content img{
+    width: 220px;
+    height: 175px;
 }

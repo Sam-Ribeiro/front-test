@@ -4,7 +4,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90dvh;
+    background-color: var(--color-background);
+    font-family:cursive;
+    color: var(--color-text);
+    margin: 0px;
 }
+
+a{
+    color: var(--color-link)
+}
+
 
 form{
     display: flex;
