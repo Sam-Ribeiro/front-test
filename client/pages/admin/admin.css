@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+main{
+    flex-direction: column;
+    padding: 30px;
+}
+
+/* Table */
+
+table{
+    background-color: var(--color-background4);
+    border-spacing: 0px;
+}
+
+tr{
+    border: 2px solid gray;
+}
+
+td{
+    border: 2px solid var(--color-background3);
+    border-top: none;
+}
+th{
+    background-color: var(--color-background);
+    color: var(--color-text2);
+    text-align: start;
+    padding: 5px;
+    border: 2px solid var(--color-background3);
+    border-bottom: none;
+    width: 20%;
+}
+
+#actions-head{
+    width: 1% !important;
+}
+td:nth-child(4) {
+    padding: 3px 0px;
+}
+
+.exclude{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--color-error);
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    font-weight: 900;
+    color: var(--color-text2);
+}
+
+td input{
+    display: flex;
+    width: 99%;
+    height: 26px;
+    margin: 0px;
+    border: none;
+}
+
+/* Form */
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+form input{
+    height: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form div{
+    width: 30%;
+}
+
+form button{
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35.2px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+form button:hover , .exclude:hover{
+    transform: scale(1.03);
+}
+
+#register{
+    background-color: var(--color-background);
+    color: var(--color-text2);
+}
+
+#clear{
+    background-color: var(--color-error);
+    color: var(--color-text2);
+}
+
+.error{
+    color: var(--color-error);
+    text-decoration: underline;
+}
