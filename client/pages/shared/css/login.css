@@ -57,6 +57,7 @@ form button:hover{
 .msg-error{
     color: var(--color-error);
     margin: 1px;
+    display: none;
 }
 
 .error{
