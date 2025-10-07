@@ -58,6 +58,11 @@ td input{
     border: none;
 }
 
+#delete-list{
+    align-self: center;
+    margin: 10px;
+}
+
 /* Form */
 
 form{
@@ -76,7 +81,7 @@ form div{
     width: 30%;
 }
 
-form button{
+.button{
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
     height: 35.2px;
@@ -84,7 +89,7 @@ form button{
     border-radius: 10px;
 }
 
-form button:hover , .exclude:hover{
+form button:hover , .exclude:hover, #delete-list:hover{
     transform: scale(1.03);
 }
 
@@ -93,7 +98,7 @@ form button:hover , .exclude:hover{
     color: var(--color-text2);
 }
 
-#clear{
+#clear, #delete-list{
     background-color: var(--color-error);
     color: var(--color-text2);
 }

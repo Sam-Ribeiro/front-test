@@ -24,3 +24,16 @@ main{
     display: flex;
     flex-direction: row;
 }
+
+#popup-info{
+    z-index: 4;
+    position: fixed;
+    height: 80%;
+    width: 25%;
+    top: 10%;
+    right: 0%;
+    background-color: var(--color-text2);
+    color: var(--color-text);
+    padding: 20px;
+    overflow-y: scroll;
+}
