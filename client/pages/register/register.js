@@ -16,14 +16,21 @@ const passwordConfirmInput = document.getElementById("password-confirm")
 const passwordConfirmError = document.getElementById("password-confirm-error")
 
 
-registerButton.onclick = function(e){
-    e.preventDefault();
+registerButton.onclick = function(event){
+    event.preventDefault();
+    nameError.style.display = 'none'
+    lastNameError.style.display = 'none'
+    emailError.style.display = 'none'
+    ageError.style.display = 'none'
+    passwordError.style.display = 'none'
+    passwordConfirmError.style.display = 'none'
     if(ValidateData()){
         RegisterUser()
     }
 }
 
 function ValidateData(){
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let ok = true
 
     if(nameInput.value.length < 3){
@@ -34,7 +41,7 @@ function ValidateData(){
         lastNameError.style.display = 'block'
         ok = false
     }
-    if(emailInput.value.length < 5 || users.some(u => u.email === emailInput.value) ){
+    if(!emailRegex.test(emailInput.value) || users.some(u => u.email === emailInput.value) ){
         emailError.style.display = 'block'
         ok = false
     }
@@ -64,7 +71,6 @@ function RegisterUser(){
         passwordConfirm: passwordConfirmInput.value
     }
     users.push(newUser)
-    localStorage.setItem("user", JSON.stringify(newUser))
     localStorage.setItem("users", JSON.stringify(users))
     window.location.href = `../login/login.html`
 }   

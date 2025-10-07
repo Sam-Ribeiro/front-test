@@ -13,7 +13,7 @@
     <header>
         <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
         <ul>
-            <li><a href="#">Saiba mais</a></li>
+            <li><a id="header-open-info" href="#">Saiba mais</a></li>
             <li><a href="../login/login.html">Sair</a></li>
         </ul>
     </header>
@@ -24,7 +24,7 @@
                     <a href="../dashboard/dashboard.html" >Dashboard <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></a>
                 </li>
                 <li>
-                    <a class="actual-page" href="../admin/admin.html">Funcionarios <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="M500-482q29-32 44.5-73t15.5-85q0-44-15.5-85T500-798q60 8 100 53t40 105q0 60-40 105t-100 53Zm220 322v-120q0-36-16-68.5T662-406q51 18 94.5 46.5T800-280v120h-80Zm80-280v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Zm-480-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM0-160v-112q0-34 17.5-62.5T64-378q62-31 126-46.5T320-440q66 0 130 15.5T576-378q29 15 46.5 43.5T640-272v112H0Zm320-400q33 0 56.5-23.5T400-640q0-33-23.5-56.5T320-720q-33 0-56.5 23.5T240-640q0 33 23.5 56.5T320-560ZM80-240h480v-32q0-11-5.5-20T540-306q-54-27-109-40.5T320-360q-56 0-111 13.5T100-306q-9 5-14.5 14T80-272v32Zm240-400Zm0 400Z"/></svg></a>
+                    <a class="actual-page" href="../admin/admin.html">Admin <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="M500-482q29-32 44.5-73t15.5-85q0-44-15.5-85T500-798q60 8 100 53t40 105q0 60-40 105t-100 53Zm220 322v-120q0-36-16-68.5T662-406q51 18 94.5 46.5T800-280v120h-80Zm80-280v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Zm-480-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM0-160v-112q0-34 17.5-62.5T64-378q62-31 126-46.5T320-440q66 0 130 15.5T576-378q29 15 46.5 43.5T640-272v112H0Zm320-400q33 0 56.5-23.5T400-640q0-33-23.5-56.5T320-720q-33 0-56.5 23.5T240-640q0 33 23.5 56.5T320-560ZM80-240h480v-32q0-11-5.5-20T540-306q-54-27-109-40.5T320-360q-56 0-111 13.5T100-306q-9 5-14.5 14T80-272v32Zm240-400Zm0 400Z"/></svg></a>
                 </li>
             </ul>
             <ul>
@@ -39,18 +39,18 @@
                 <div>
                     <label for="name">Nome:</label>
                     <input type="text" name="name" id="new-name" autocomplete="off">
-                    <span class="error" style="visibility: hidden;">Nome inválido.</span>
+                    <span id="name-error" class="error" style="visibility: hidden;">Nome inválido.</span>
                 </div>
                 <div>
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="new-email" autocomplete="off">
-                    <span class="error" style="visibility: hidden;">Email inválido.</span>
+                    <span id="email-error" class="error" style="visibility: hidden;">Email inválido.</span>
                 </div>
-                <button id="register" class="button">Cadastrar</button>
-                <button id="clear" class="button">Limpar Campos</button>
+                <button id="btn-register" class="button">Cadastrar</button>
+                <button id="btn-clear" class="button">Limpar Campos</button>
             </form>
             <h2>Usuários cadastrados</h2>
-            <table>
+            <table id="clients-table">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -62,24 +62,24 @@
                         <td><input type="text" name="name" id="name-search" placeholder="Filtrar por nome"></td>
                         <td><input type="text" name="email" id="email-search" placeholder="Filtrar por email" autocomplete="off"></td>
                         <td><input type="text" name="date" id="date-search" placeholder="Filtrar por data"></td>
-                        <td><button class="exclude">Limpar <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M791-55 55-791l57-57 736 736-57 57ZM633-440l-80-80h167v80h-87ZM433-640l-80-80h487v80H433Zm-33 400v-80h160v80H400ZM240-440v-80h166v80H240ZM120-640v-80h86v80h-86Z"/></svg> </button></td>
+                        <td><button id="clear-search" class="exclude">Limpar <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M791-55 55-791l57-57 736 736-57 57ZM633-440l-80-80h167v80h-87ZM433-640l-80-80h487v80H433Zm-33 400v-80h160v80H400ZM240-440v-80h166v80H240ZM120-640v-80h86v80h-86Z"/></svg> </button></td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Samuel</td> <td> samuel@email.com</td> <td>03-01-2025</td> <td><button class="exclude">Excluir <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg> </button></td>
-                    </tr>
-                    <tr>
-                        <td>Test</td> <td> test@email.com</td> <td>03-01-2025</td> <td> <button class="exclude">Excluir <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button></td>
-                    </tr>
                 </tbody>
             </table>
             <button id="delete-list" class="button">Apagar lista</button>
-                <div hidden> 
-                    Tem certeza que deseja deletar todos os usuários?
-                    <button>Confirmar</button>
-                    <button>Cancelar</button>
-                </div>
+            <div hidden> 
+                Tem certeza que deseja deletar todos os usuários?
+                <button>Confirmar</button>
+                <button>Cancelar</button>
+            </div>
+            <div id="popup-info" tabindex="0" style="visibility: hidden;">
+                <h2>A Importância do Cadastro de Usuários e E-mails para o Funcionamento e a Segurança de um Sistema</h2>
+                <p>Em qualquer sistema digital moderno — seja um site, uma aplicação web ou uma plataforma de serviços — o cadastro de usuários é um elemento fundamental. Ele representa o ponto de partida para a personalização da experiência, o controle de acesso e a garantia de segurança dos dados. O registro de informações como nome, e-mail e senha permite que cada pessoa tenha um perfil próprio, com funcionalidades específicas, histórico de uso e preferências salvas. Isso não apenas facilita a interação do usuário com o sistema, mas também possibilita que a aplicação ofereça um serviço mais eficiente e direcionado.
+                <p>O e-mail, em especial, tem papel central nesse processo. Ele funciona como um identificador digital único, essencial para a autenticação e a recuperação de contas. Em casos de esquecimento de senha, confirmação de cadastro ou envio de notificações importantes, o e-mail é o canal mais seguro e direto entre o sistema e o usuário. Além disso, ele contribui para a verificação da identidade, evitando o uso de contas falsas e fortalecendo a confiabilidade da base de dados.</p>
+                <p>Do ponto de vista da segurança, o cadastro de usuários é indispensável para proteger informações sensíveis e controlar o acesso a diferentes níveis de permissão dentro do sistema. Em plataformas que envolvem dados pessoais, financeiros ou acadêmicos, a autenticação por meio de login e senha é uma barreira essencial contra invasões, fraudes e vazamentos. Sistemas mais complexos podem ainda implementar autenticação em dois fatores, aumentando a proteção das contas.</p>
+            </div>
         </main>
         
     </div>
@@ -89,5 +89,7 @@
         <a href="https://github.com/Sam-Ribeiro" target="_blank">GitHub</a>
     </footer>
     <script src="../shared/js/menu.js"></script>
+    <script src="../shared/js/main.js"></script>
+    <script src="admin.js"></script>
 </body>
 </html>

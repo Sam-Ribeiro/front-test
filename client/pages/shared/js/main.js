@@ -1,13 +1,15 @@
 
 const headerInfoButton = document.getElementById("header-open-info")
-const contentInfoButton = document.getElementById("content-open-info")
+const contentInfoButton = document.getElementById("content-open-info") || []
 const info = document.getElementById("popup-info")
 
 
-headerInfoButton.onclick = function() {
+headerInfoButton.onclick = function(event) {
+    event.preventDefault()
     OpenInfo()
 }
-contentInfoButton.onclick = function() {
+contentInfoButton.onclick = function(event) {
+    event.preventDefault()
     OpenInfo()
 }
 
