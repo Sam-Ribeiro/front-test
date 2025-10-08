@@ -3,7 +3,7 @@
 body{
     height: 90dvh;
     background-color: var(--color-background);
-    font-family:cursive;
+    font-family: "Comic Sans MS";;
     color: var(--color-text);
     margin: 0px;
     display: flex;

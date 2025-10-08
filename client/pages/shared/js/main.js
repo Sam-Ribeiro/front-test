@@ -47,6 +47,7 @@ function CloseInfo(){
 
 function Logout(){
     localStorage.removeItem("user")
+    window.location.href = `../login/login.html`
 }
 
 function VerifyPermission(){
