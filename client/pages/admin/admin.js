@@ -9,27 +9,48 @@ let clients = JSON.parse(localStorage.getItem("clients")) || []
 const nameFilter = document.getElementById("name-search")
 const emailFilter = document.getElementById("email-search")
 const dateFilter = document.getElementById("date-search")
+const deleteListButton = document.getElementById("delete-list")
+const deleteConfirmModal = document.getElementById("confirm-delete-modal")
+const confirmDeleteButton = document.getElementById("confirm-delete-button")
+const cancelDeleteButton = document.getElementById("cancel-delete-button")
 
 registerButton.onclick = function(event){
-    event.preventDefault();
+    event.preventDefault()
     clients = JSON.parse(localStorage.getItem("clients")) || []
     if(ValidateData()){
         RegisterClient()
     }
 }
 clearButton.onclick = function(event){
-    event.preventDefault();
+    event.preventDefault()
     nameInput.value = ''
     emailInput.value = ''
 }
 
 clearSearchButton.onclick = function(event){
-    event.preventDefault();
+    event.preventDefault()
     nameFilter.value = ''
     emailFilter.value = ''
     dateFilter.value = ''
     LoadTable()
 }
+
+deleteListButton.onclick = function(event){
+    event.preventDefault();
+    deleteConfirmModal.showModal()
+}
+
+confirmDeleteButton.onclick = function(event){
+    event.preventDefault()
+    deleteConfirmModal.close()
+    DeleteAllClients()
+}
+
+cancelDeleteButton.onclick = function(event){
+    event.preventDefault()
+    deleteConfirmModal.close()
+}
+
 
 function ValidateData(){
     let ok = true
@@ -134,9 +155,14 @@ function DeleteClient(email){
     LoadTable()
 }
 
+function DeleteAllClients(){
+    localStorage.removeItem("clients")
+    LoadTable()
+}
 
-nameFilter.addEventListener("input", LoadTable);
-emailFilter.addEventListener("input", LoadTable);
-dateFilter .addEventListener("input", LoadTable);
+
+nameFilter.addEventListener("input", LoadTable)
+emailFilter.addEventListener("input", LoadTable)
+dateFilter .addEventListener("input", LoadTable)
 
 LoadTable()

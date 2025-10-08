@@ -113,3 +113,26 @@ form button:hover , .exclude:hover, #delete-list:hover{
     color: var(--color-error);
     text-decoration: underline;
 }
+
+#btn-register, #cancel-delete-button{
+    background-color: var(--color-background);
+    color: var(--color-text2);
+}
+
+#btn-clear, #confirm-delete-button{
+    background-color:  var(--color-error);
+    color: var(--color-text2);
+}
+
+#confirm-delete-modal section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

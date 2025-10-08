@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +12,13 @@
 </head>
 <body>
     <header>
-        <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        <ul>
+            <li><svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+            <li><span>FlowContact</span> 
+        </ul>
         <ul>
             <li><a id="header-open-info" href="#">Saiba mais</a></li>
-            <li><a href="../login/login.html">Sair</a></li>
+            <li><a id="header-logout" href="../login/login.html">Sair</a></li>
         </ul>
     </header>
     <div id="main-container">
@@ -29,7 +32,7 @@
                 </li>
             </ul>
             <ul>
-                <li><a href="../login/login.html">Sair <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg></a></li>
+                <li><a id="nav-logout" href="../login/login.html">Sair <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"/></svg></a></li>
             </ul>
         </nav>
 
@@ -38,12 +41,12 @@
             <h2>Cadastrar novos usuários</h2>
             <form>
                 <div>
-                    <label for="name">Nome:</label>
+                    <label for="new-name">Nome:</label>
                     <input type="text" name="name" id="new-name" autocomplete="off" maxlength="50">
                     <span id="name-error" class="error" style="visibility: hidden;">Nome inválido.</span>
                 </div>
                 <div>
-                    <label for="email">Email:</label>
+                    <label for="new-email">Email:</label>
                     <input type="email" name="email" id="new-email" autocomplete="off" maxlength="50">
                     <span id="email-error" class="error" style="visibility: hidden;">Email inválido.</span>
                 </div>
@@ -72,11 +75,16 @@
             </table>
             </div>
             <button id="delete-list" class="button">Apagar lista</button>
-            <div hidden> 
-                Tem certeza que deseja deletar todos os usuários?
-                <button>Confirmar</button>
-                <button>Cancelar</button>
-            </div>
+            <dialog id="confirm-delete-modal">
+                <section>
+                    <h2>Apagar lista de usuários</h2>
+                    <span>Tem certeza que deseja deletar todos os usuários?</span>
+                    <div class="button-row">
+                        <button id="confirm-delete-button" class="button">Confirmar</button>
+                        <button id="cancel-delete-button" class="button">Cancelar</button>
+                    </div>
+                </section>
+            </dialog>
             <div id="popup-info" tabindex="0" style="visibility: hidden;">
                 <h2>A Importância do Cadastro de Usuários e E-mails para o Funcionamento e a Segurança de um Sistema</h2>
                 <p>Em qualquer sistema digital moderno — seja um site, uma aplicação web ou uma plataforma de serviços — o cadastro de usuários é um elemento fundamental. Ele representa o ponto de partida para a personalização da experiência, o controle de acesso e a garantia de segurança dos dados. O registro de informações como nome, e-mail e senha permite que cada pessoa tenha um perfil próprio, com funcionalidades específicas, histórico de uso e preferências salvas. Isso não apenas facilita a interação do usuário com o sistema, mas também possibilita que a aplicação ofereça um serviço mais eficiente e direcionado.
@@ -87,7 +95,7 @@
         
     </div>
     <footer>
-        Criado por Samuel Ribeiro
+        <span>Criado por Samuel Ribeiro</span>
         <a href="https://www.linkedin.com/in/samuel-ribeiro-da-costa-188611182" target="_blank">Linkedin</a>
         <a href="https://github.com/Sam-Ribeiro" target="_blank">GitHub</a>
     </footer>

@@ -21,3 +21,12 @@ function Login(){
     }
     errorLogin.style.display = 'block'
 }
+
+function VerifyPermission(){
+    const user = JSON.parse(localStorage.getItem("user"))   
+    if(user != null){
+        window.location.href = `../dashboard/dashboard.html`
+    }
+}
+
+VerifyPermission()

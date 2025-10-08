@@ -11,17 +11,30 @@ header{
     margin: 0px;
     padding: 0px 30px;   
     color: var(--color-text2);
+    z-index: 2;
 }
 
 header ul{
     display: flex;
     gap: 50px;
     list-style: none;
+    padding-left: 0px;
 }
 
 header a{
     text-decoration: none;
     color: var(--color-text2);
+}
+
+header span{
+    font-size: 1.2em;
+}
+
+#menu-btn{
+    transition: all 0.2s ease;
+}
+#menu-btn:hover{
+    transform: scale(1.2);
 }
 
 /* Nav */
@@ -86,6 +99,7 @@ footer{
     z-index: 2;
     color: var(--color-text2);
     background-color: var(--color-background3);
+    font-family: "Poppins", sans-serif;
 }
 
 footer a{

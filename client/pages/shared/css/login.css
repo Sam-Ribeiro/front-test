@@ -4,17 +4,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90dvh;
+    height: 100%;
     background-color: var(--color-background);
     font-family:cursive;
     color: var(--color-text);
     margin: 0px;
+    overflow-y: auto;
 }
 
 a{
     color: var(--color-link)
 }
-
 
 form{
     display: flex;
@@ -25,6 +25,7 @@ form{
     flex: 1;
     padding: 10px 50px;
     border-radius: 10px;
+    
 }
 
 form input{
@@ -62,4 +63,10 @@ form button:hover{
 
 .error{
     border-bottom: 4px solid var(--color-error);
+}
+
+.title{
+    text-align: center;
+    font-size: 3.0em;
+    color: var(--color-text2);
 }

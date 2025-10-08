@@ -74,3 +74,10 @@ function RegisterUser(){
     localStorage.setItem("users", JSON.stringify(users))
     window.location.href = `../login/login.html`
 }   
+
+function VerifyPermission(){
+    const user = JSON.parse(localStorage.getItem("user"))   
+    if(user != null){
+        window.location.href = `../dashboard/dashboard.html`
+    }
+}
