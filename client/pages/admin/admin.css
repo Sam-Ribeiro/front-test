@@ -3,9 +3,14 @@
 main{
     flex-direction: column;
     padding: 30px;
+    height: 100dvh;
 }
 
 /* Table */
+
+#table-section{
+    overflow-y: scroll;
+}
 
 table{
     background-color: var(--color-background4);
@@ -19,6 +24,7 @@ tr{
 td{
     border: 2px solid var(--color-background3);
     border-top: none;
+    text-align: left;
 }
 th{
     background-color: var(--color-background);

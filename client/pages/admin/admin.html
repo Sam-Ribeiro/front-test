@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../shared/css/themes.css">
     <link rel="stylesheet" href="../shared/css/menus.css">
     <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
     <title>Admin</title>
 </head>
 <body>
@@ -38,18 +39,19 @@
             <form>
                 <div>
                     <label for="name">Nome:</label>
-                    <input type="text" name="name" id="new-name" autocomplete="off">
+                    <input type="text" name="name" id="new-name" autocomplete="off" maxlength="50">
                     <span id="name-error" class="error" style="visibility: hidden;">Nome inválido.</span>
                 </div>
                 <div>
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="new-email" autocomplete="off">
+                    <input type="email" name="email" id="new-email" autocomplete="off" maxlength="50">
                     <span id="email-error" class="error" style="visibility: hidden;">Email inválido.</span>
                 </div>
                 <button id="btn-register" class="button">Cadastrar</button>
                 <button id="btn-clear" class="button">Limpar Campos</button>
             </form>
             <h2>Usuários cadastrados</h2>
+            <div id="table-section">
             <table id="clients-table">
                 <thead>
                     <tr>
@@ -68,6 +70,7 @@
                 <tbody>
                 </tbody>
             </table>
+            </div>
             <button id="delete-list" class="button">Apagar lista</button>
             <div hidden> 
                 Tem certeza que deseja deletar todos os usuários?

@@ -4,7 +4,7 @@ const users = JSON.parse(localStorage.getItem("users")) || []
 const emailInput = document.getElementById("email")
 const passwordInput = document.getElementById("password")
 const buttonLogin = document.getElementById("btn-login")
-
+const errorLogin = document.getElementById("error-login")
 
 buttonLogin.addEventListener('click', (event) => {
     event.preventDefault()
@@ -19,5 +19,5 @@ function Login(){
             window.location.href = `../dashboard/dashboard.html`
         }
     }
-    
+    errorLogin.style.display = 'block'
 }
